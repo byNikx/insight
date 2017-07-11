@@ -24,26 +24,25 @@ md-sidenav {
   background-color: #fff;
 }
 bd-container{
-	section.bd-container{
-		&.xs{
-			margin:.5rem auto;
-			width: 95%
-		}
-		&.sm{
-			margin:1rem auto;
-			width: 80%
-		}
-		&.md{
-			margin:1rem auto;
-			width: 75%
-		}
-		&.lg{
-			margin:1rem auto;
-			width: 65%
-		}
-		&.xl{
-			margin:1rem auto;
-			width: 55%
-		}
+	display: block;
+	&.xs{
+		margin:.5rem auto;
+		width: 95%
+	}
+	&.sm{
+		margin:1rem auto;
+		width: 80%
+	}
+	&.md{
+		margin:1rem auto;
+		width: 75%
+	}
+	&.lg{
+		margin:1rem auto;
+		width: 65%
+	}
+	&.xl{
+		margin:1rem auto;
+		width: 55%
 	}
 }

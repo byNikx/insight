@@ -6,9 +6,10 @@ const BREAKPOINTS = ['xs', 'sm', 'md', 'lg', 'xl'];
 
 @Component({
   selector: 'bd-container',
-  template: `<section [ngClass]="['bd-container', activeClass]">
-  	<ng-content></ng-content>
-  </section>`,
+  host: {
+  	'[class]': 'activeClass'
+  },
+  template: `<ng-content></ng-content>`,
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent implements OnInit, OnDestroy {

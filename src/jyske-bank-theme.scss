@@ -4,17 +4,17 @@
 @include mat-core();
 
 $primary: mat-palette($mat-teal, 900);
-$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$accent:  mat-palette($mat-orange, 800);
 
-$candy-app-warn:    mat-palette($mat-red);
+$warn:    mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$candy-app-theme: mat-light-theme($primary, $candy-app-accent, $candy-app-warn);
+$app-theme: mat-light-theme($primary, $accent, $warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($candy-app-theme);
+@include angular-material-theme($app-theme);
 body{
 	padding: 0;
 	margin: 0;	
@@ -31,18 +31,18 @@ bd-container{
 	}
 	&.sm{
 		margin:1rem auto;
-		width: 80%
+		width: 85%
 	}
 	&.md{
 		margin:1rem auto;
-		width: 75%
+		width: 80%
 	}
 	&.lg{
 		margin:1rem auto;
-		width: 65%
+		width: 75%
 	}
 	&.xl{
 		margin:1rem auto;
-		width: 55%
+		width: 60%
 	}
 }

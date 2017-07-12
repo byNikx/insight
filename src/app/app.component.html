@@ -29,9 +29,27 @@
 				</button>
 			</md-toolbar>
 			<section fxFlex style="overflow: auto;">
+				<bd-container fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="20px">
+					<md-card fxFlex *ngFor="let type of ['have', 'owe']">
+				    	<md-card-title>What i {{type}}</md-card-title>
+				    	<md-card-subtitle>As of 2nd JUL, 2017</md-card-subtitle>
+				    	<md-card-content md-card-image fxLayout="row" fxLayoutAlign="start center">
+						    <md-nav-list>
+						    	<md-list-item *ngFor="let i of ['Investment', 'Cheques', 'Savings']">
+							    	<md-icon md-list-icon>folder</md-icon>
+						    		<h4 md-line>$37,2839</h4>
+						    		<p md-line>13% {{i}}</p>
+						    	</md-list-item>
+						    </md-nav-list>
+						    <img style="height: 150px;" src="http://www.conceptdraw.com/How-To-Guide/picture/Percentage-pie-chart-DA-determinations.png" alt="">
+					    </md-card-content>
+					</md-card>
+				</bd-container>
 				<bd-container>
-					<md-card>
-						<bd-chart type="LineChart" [options]="line_ChartOptions" [data]="line_ChartData"></bd-chart>
+<!-- 					<h1 class="mat-headline heading" style="margin-left: 1rem;">Headline</h1>
+ -->					<md-card>
+						<md-card-title>Headline</md-card-title>
+<!-- 						<bd-chart type="LineChart" [options]="line_ChartOptions" [data]="line_ChartData"></bd-chart> -->
 					</md-card>
 				</bd-container>
 			</section>

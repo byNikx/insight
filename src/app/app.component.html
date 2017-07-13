@@ -45,12 +45,35 @@
 					    </md-card-content>
 					</md-card>
 				</bd-container>
-				<bd-container>
+				<bd-container fxLayout="column" fxLayoutGap="20px">
+					<section fxLayout="row" fxLayoutGap="40px">
+						<section style="height: 50px; width: 50px; border-radius: 25px; border:1px solid rgba(0, 0, 0, .12);" fxLayout="column" fxLayoutAlign="center center">
+							<h2 class="mat-title no-margin">7</h2>
+						</section>
+						<section fxFlex fxLayout="column" fxLayoutAlign="center start">
+						    <h2 class="mat-title no-margin" style="line-height: 1.2rem;">Friday</h2>
+							<h3 class="mat-subheading-2 no-margin">July, 2017</h3>
+						</section>
+					</section>
+					<section fxLayout="row" fxLayoutGap="20px" fxLayoutAlign=" center" *ngFor="let i of [1,2,3,4,5]">
+						<section class="mat-elevation-z1" style="height: 50px; width: 50px; border-radius: 25px; background-color: #fff;" fxLayout="column" fxLayoutAlign="center center">
+							<md-icon>local_atm</md-icon>
+						</section>
+						<section fxFlex fxLayout="row" fxLayoutAlign="start center" style="background-color: #fff; padding: 5px 20px" class="mat-elevation-z1">
+							<section fxFlex fxLayout="column">
+								<span class="mat-body-2 no-margin">Pay cheque</span>
+								<span class="mat-body-1 no-margin">Paycheque</span>								
+							</section>
+							<section fxLayout="row" fxLayoutAlign="start center">
+								<h3 class="mat-subheading-2 no-margin">$ 293,223,232</h3>
+							</section>
+						</section>
+					</section>
 <!-- 					<h1 class="mat-headline heading" style="margin-left: 1rem;">Headline</h1>
- -->					<md-card>
+ -->					<!-- <md-card>
 						<md-card-title>Headline</md-card-title>
-<!-- 						<bd-chart type="LineChart" [options]="line_ChartOptions" [data]="line_ChartData"></bd-chart> -->
-					</md-card>
+						<bd-chart type="LineChart" [options]="line_ChartOptions" [data]="line_ChartData"></bd-chart>
+					</md-card> -->
 				</bd-container>
 			</section>
 		</section>

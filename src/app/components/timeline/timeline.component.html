@@ -1,0 +1,31 @@
+<bd-container>
+	<section fxLayout="column" fxLayoutGap="10px">
+		<section fxLayout="row" class="header" fxLayoutGap="20px">
+			<span></span><h2 class="mat-title no-margin">23rd July, 2017</h2>
+		</section>
+		<section fxLayout="row" class="category-card mat-elevation-z2" style="background-color: #fff" fxLayoutGap="15px" *ngFor="let i of [1,2,3,4,5]">
+			<section fxFlex="5px" class="indicator" style="background-color: #004D40;">
+				
+			</section>
+			<section>
+				<section class="category-icon" style="background-color: #004D40; border-radius: 30px; height: 60px; width: 60px; margin: 7px 0;" fxLayout="column" fxLayoutAlign="center center">
+					<img src="../assets/img/money.png" alt="" height="35px">
+				</section>
+			</section>
+			<section fxFlex fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="center start">
+				<h3 style="font-weight: 500" class="no-margin">Extra Options</h3>
+				<a href="#" style="text-decoration: none; color: rgba(0,0,0,.8);">Income</a>
+			</section>
+			<section fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="center">
+				<section style="background-color: teal1;" fxLayout="row" fxLayoutAlign="end center">
+					<h2 fxFlex class="no-margin" style="padding-right: 15px; text-align: right">DKK 23</h2>
+				</section>
+				<section fxLayout="row">
+					<button md-button>Change?</button>
+					<button md-button style="min-width: 50px">Ok?</button>
+				</section>
+			</section>
+			<span></span>
+		</section>
+	</section>
+</bd-container>

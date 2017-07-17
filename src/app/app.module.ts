@@ -12,12 +12,14 @@ import { AppComponent } from './app.component';
 import 'hammerjs';
 import { ContainerComponent } from './components/container/container.component';
 import { ChartComponent } from './components/chart/chart.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContainerComponent,
-    ChartComponent
+    ChartComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,

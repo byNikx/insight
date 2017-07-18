@@ -1,0 +1,31 @@
+.category-card{
+	background-color: #fff;
+}
+.category-card .indicator, .category-card .category-icon{
+	background-color: #004D40;
+}
+.category-card .category-icon{
+	border-radius: 30px; 
+	height: 60px; 
+	width: 60px; 
+	margin: 7px 0;
+}
+.category-card .category-icon img{
+	display: block;
+	height: 35px;
+	width: auto;
+}
+.category-card .transaction-title{
+	font-weight: 500;
+	margin: 0;
+}
+.category-card .category-name{
+	color: rgba(0, 0, 0, .8);
+	margin: 0;
+}
+.category-card.uncategorized{
+	background-color: #FFF9C4;
+}
+.category-card.uncategorized .indicator, .category-card.uncategorized .category-icon{
+	background-color: #FF8F00;
+}

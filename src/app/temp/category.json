@@ -1,26 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {MdDialog} from '@angular/material';
-
-
-@Component({
-  selector: 'bd-timeline',
-  templateUrl: './timeline.component.html',
-  styleUrls: ['./timeline.component.css']
-})
-export class TimelineComponent implements OnInit {
-
-  constructor(public dialog: MdDialog) {}
-
-	changeCategory(){
-		this.dialog.open(CategorySelectionDialog, {
-			width: '600px'
-		});
-	}
-
-  ngOnInit() {
-  }
-
-  transactions = [
+[
 	{
 		"desc": "Pizza Hut",
 		"category": {
@@ -72,14 +50,4 @@ export class TimelineComponent implements OnInit {
 		"comment": null,
 		"isCategorized": true
 	}
-];
-
-}
-
-@Component({
-	templateUrl: 'category-selection-dialog.html'
-})
-
-export class CategorySelectionDialog {
-
-}
+]

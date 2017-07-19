@@ -29,3 +29,9 @@
 .category-card.uncategorized .indicator, .category-card.uncategorized .category-icon{
 	background-color: #FF8F00;
 }
+
+
+.change-category-dialog{
+	width: 100%;
+	max-width: 500px;
+}

@@ -12,14 +12,15 @@ import { AppComponent } from './app.component';
 import 'hammerjs';
 import { ContainerComponent } from './components/container/container.component';
 import { ChartComponent } from './components/chart/chart.component';
-import { TimelineComponent } from './components/timeline/timeline.component';
+import { TimelineComponent, CategorySelectionDialog } from './components/timeline/timeline.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContainerComponent,
     ChartComponent,
-    TimelineComponent
+    TimelineComponent,
+    CategorySelectionDialog
   ],
   imports: [
     BrowserModule,
@@ -29,6 +30,7 @@ import { TimelineComponent } from './components/timeline/timeline.component';
     FormsModule,
     HttpModule
   ],
+  entryComponents: [CategorySelectionDialog],
   providers: [],
   bootstrap: [AppComponent]
 })

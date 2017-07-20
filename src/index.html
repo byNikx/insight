@@ -10,9 +10,10 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4W7Oqu8LjN0R85vrxIYXAo0AWP3z8xK0"></script>
   <script>  
     // !important: You want to give this variable(var googleLoaded = false;). This is used to run multiple chart in your jade.
-    var isChartLoaded = false;
+    var isChartLoaded = isMapLoaded = false;
     // !important: Define which chart packages to preload.Because this package uses ChartWrappers you can use any chart type that Google supports, but if it // isn't loaded it will load it on demand. 
     var packages = ['geochart'];
 </script>

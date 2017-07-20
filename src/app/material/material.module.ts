@@ -2,13 +2,15 @@ import { NgModule } from '@angular/core';
 import {
 	MdButtonModule, MdIconModule, MdToolbarModule,
 	MdListModule, MdCardModule, MdProgressSpinnerModule,
-	MdDialogModule, MdCheckboxModule, MdRadioModule
+	MdDialogModule, MdCheckboxModule, MdRadioModule,
+	MdTabsModule
 } from '@angular/material';
 
 const MD_MODULES = [
 	MdButtonModule, MdIconModule, MdToolbarModule,
 	MdListModule, MdCardModule, MdProgressSpinnerModule,
-	MdDialogModule, MdCheckboxModule, MdRadioModule
+	MdDialogModule, MdCheckboxModule, MdRadioModule,
+	MdTabsModule
 ]
 
 @NgModule({

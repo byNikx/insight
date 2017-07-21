@@ -1,6 +1,6 @@
-.bd-map{
-	background-color: red;
-	height: 200px;
+:host{
+	height: 300px;
 	width: 100%;
-	content: 'abcd';
+	display: block;
+/*	content: 'abcd';*/
 }

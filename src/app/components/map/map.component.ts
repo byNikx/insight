@@ -20,14 +20,14 @@ export class MapComponent implements OnInit {
 
 	ngOnInit() {
 //		this.loadMapAPI();
-		//this.drawMap();
+		this.drawMap();
 	}
 
 	loadMapAPI(): void{
 		if(google){
 			if(!isMapLoaded)
 				isMapLoaded = true;
-			google.charts.load('current', {'packages': ['corechart', 'gauge']['orgchart']});
+			
 		}
 	}
 

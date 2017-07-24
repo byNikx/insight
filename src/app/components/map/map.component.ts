@@ -34,9 +34,9 @@ export class MapComponent implements OnInit {
 	drawMap(){
 		setTimeout(()=>{
 			console.log('Drawing map...');
-			var uluru = {lat: -25.363, lng: 131.044};
+			var uluru = {lat: 28.4948242, lng: 77.0934929};
 	        var mapq = new google.maps.Map(this.map, {
-	          zoom: 4,
+	          zoom: 18,
 	          center: uluru
 	        });
 	        var marker = new google.maps.Marker({

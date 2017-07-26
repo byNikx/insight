@@ -3,7 +3,7 @@
 		<section fxLayout="row" class="header" fxLayoutGap="20px">
 			<span></span><h2 class="mat-title no-margin">23rd July, 2017</h2>
 		</section>
-		<section fxLayout="column" fxLayoutGap="5px" *ngFor="let transaction of transactions">
+		<section fxLayout="column" fxLayoutGap="5px" *ngFor="let transaction of transactions; let i = index">
 			<section fxLayout="row" [ngClass]="{'category-card mat-elevation-z2':true, 'uncategorized':!transaction.isCategorized}" fxLayoutGap="15px">
 				<section fxFlex="5px" class="indicator"></section>
 				<section>
@@ -11,7 +11,7 @@
 						<img src="{{i==3?'../assets/img/warning.png':'../assets/img/money.png'}}" alt="icon">
 					</section>
 				</section>
-				<section routerLink="/transaction/1" fxFlex fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="center start">
+				<section routerLink="/transaction/{{i+1}}" fxFlex fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="center start">
 					<h3 class="transaction-title">{{transaction.desc}}</h3>
 					<h4 class="category-name">{{transaction.category.label}}</h4>
 				</section>
@@ -20,8 +20,8 @@
 						<h4 fxFlex class="no-margin mat-title" style="padding-right: 15px; text-align: right"><strong>$23,219,233</strong></h4>
 					</section>
 					<section fxLayout="row" *ngIf="!transaction.isCategorized">
-						<button md-button (click)="changeCategory()">CHANGE?</button>
-						<button md-button style="min-width: 50px">OK</button>
+						<button md-button (click)="changeCategory()">CHANGE</button>
+						<button md-button style="min-width: 50px">YES</button>
 					</section>
 				</section>
 				<span></span>

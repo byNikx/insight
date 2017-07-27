@@ -20,3 +20,10 @@ export class TransactionViewComponent implements OnInit {
 	}
 
 }
+
+export interface Data{
+	id: string;
+	currentMonth: string;
+	average: string;
+	total: string;
+}

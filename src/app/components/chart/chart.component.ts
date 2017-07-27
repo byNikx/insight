@@ -55,13 +55,22 @@ export class ChartComponent implements OnInit, OnChanges {
 		function drawChart() {
 	        var data = google.visualization.arrayToDataTable([
 	          ['Year', 'Sales', 'Expenses', 'Profit'],
-	          ['2014', 1000, 400, 200],
-	          ['2015', 1170, 460, 250],
-	          ['2016', 660, 1120, 300],
-	          ['2017', 1030, 540, 350]
+	          ['2014', 600, 400, 200],
+	          ['2015', 170, 460, 250],
+	          ['2016', 660, 290, 300],
+	          ['2017', 430, 540, 350],
+	          ['2014', 300, 400, 200],
+	          ['2015', 170, 460, 250],
+	          ['2016', 660, 820, 300],
+	          ['2017', 130, 540, 350],
+	          ['2014', 390, 400, 200],
+	          ['2015', 720, 460, 250],
+	          ['2016', 660, 210, 300],
+	          ['2017', 130, 540, 350]
 	        ]);
 
 	        var options = {
+	        	width:'100%',
 	          chart: {
 	            title: 'Company Performance',
 	            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
@@ -69,8 +78,9 @@ export class ChartComponent implements OnInit, OnChanges {
 	        };
 
 	        var chart1 = new google.charts.Bar(chart);
-
-	        chart1.draw(data, google.charts.Bar.convertOptions(options));
+	        setTimeout(()=>{
+	        	chart1.draw(data, google.charts.Bar.convertOptions(options));
+	        },100);
 	    }
 
 	}

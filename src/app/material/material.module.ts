@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CdkTableModule } from '@angular/cdk';
 import {
 	MdButtonModule, MdIconModule, MdToolbarModule,
 	MdListModule, MdCardModule, MdProgressSpinnerModule,
@@ -12,7 +13,7 @@ const MD_MODULES = [
 	MdListModule, MdCardModule, MdProgressSpinnerModule,
 	MdDialogModule, MdCheckboxModule, MdRadioModule,
 	MdTabsModule, MdSelectModule, MdSliderModule,
-	MdTableModule
+	MdTableModule, CdkTableModule
 ]
 
 @NgModule({

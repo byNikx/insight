@@ -1,24 +1,23 @@
 import { NgModule } from '@angular/core';
-import {MatTableModule} from '@angular/material';
 import {
-	MdButtonModule, MdIconModule, MdToolbarModule,
-	MdListModule, MdCardModule, MdProgressSpinnerModule,
-	MdDialogModule, MdCheckboxModule, MdRadioModule,
-	MdTabsModule, MdSelectModule, MdSliderModule,
-	MdTableModule
+	MatButtonModule, MatIconModule, MatToolbarModule,
+	MatListModule, MatCardModule, MatProgressSpinnerModule,
+	MatDialogModule, MatCheckboxModule, MatRadioModule,
+	MatTabsModule, MatSelectModule, MatSliderModule,
+	MatTableModule
 } from '@angular/material';
 
-const MD_MODULES = [
-	MdButtonModule, MdIconModule, MdToolbarModule,
-	MdListModule, MdCardModule, MdProgressSpinnerModule,
-	MdDialogModule, MdCheckboxModule, MdRadioModule,
-	MdTabsModule, MdSelectModule, MdSliderModule,
-	MdTableModule, MatTableModule
+const Mat_MODULES = [
+	MatButtonModule, MatIconModule, MatToolbarModule,
+	MatListModule, MatCardModule, MatProgressSpinnerModule,
+	MatDialogModule, MatCheckboxModule, MatRadioModule,
+	MatTabsModule, MatSelectModule, MatSliderModule,
+	MatTableModule, MatTableModule
 ]
 
 @NgModule({
-  imports: [].concat(MD_MODULES),
-  exports:[].concat(MD_MODULES),
+  imports: [].concat(Mat_MODULES),
+  exports:[].concat(Mat_MODULES),
   declarations: []
 })
 export class MaterialModule { }

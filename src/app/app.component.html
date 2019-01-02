@@ -1,52 +1,52 @@
 <section style="height: 100%; width: 100%; position: absolute;">
-	<md-sidenav-container fxFlex fxLayout="row">
-		<md-sidenav #sidenav mode="side" opened="true" class="mat-elevation-z4" fxLayout="column" style="z-index: 1">
-			<md-toolbar>
+	<mat-sidenav-container fxFlex fxLayout="row" style="height: 100%;">
+		<mat-sidenav #sidenav mode="side" opened="true" class="mat-elevation-z4" fxLayout="column" style="z-index: 1">
+			<mat-toolbar>
 				<img src="/assets/img/Jyske_Bank.svg" alt="Jyske Bank" height="20px">
-			</md-toolbar>
-			<md-divider></md-divider>
+			</mat-toolbar>
+			<mat-divider></mat-divider>
 			<section fxFlex style="overflow: auto;">
-				<md-nav-list>
-					<h3 md-subheader>General</h3>
-					<md-list-item *ngFor="let link of links">
-				 		<md-icon md-list-icon>{{link.icon}}</md-icon>
-				    	<a md-line routerLink="/{{link.url}}">{{ link.label }}</a>
-				  	</md-list-item>
-				  	<md-divider></md-divider>
-				  	<h3 md-subheader>Settings</h3>
-					<md-list-item *ngFor="let link of settings">
-				 		<md-icon md-list-icon>{{link.icon}}</md-icon>
-				    	<a md-line href="#/{{link.url}}">{{ link.label }}</a>
-				  	</md-list-item>
-				  	<md-divider></md-divider>
-				</md-nav-list>	
+				<mat-nav-list>
+					<h3 mat-subheader>General</h3>
+					<mat-list-item *ngFor="let link of links">
+				 		<mat-icon mat-list-icon>{{link.icon}}</mat-icon>
+				    	<a mat-line routerLink="/{{link.url}}">{{ link.label }}</a>
+				  	</mat-list-item>
+				  	<mat-divider></mat-divider>
+				  	<h3 mat-subheader>Settings</h3>
+					<mat-list-item *ngFor="let link of settings">
+				 		<mat-icon mat-list-icon>{{link.icon}}</mat-icon>
+				    	<a mat-line href="#/{{link.url}}">{{ link.label }}</a>
+				  	</mat-list-item>
+				  	<mat-divider></mat-divider>
+				</mat-nav-list>	
 			</section>
-		</md-sidenav>
+		</mat-sidenav>
 		<section fxFlex fxLayout="column">
-			<md-toolbar  style="z-index: 1" color="primary" class="mat-elevation-z4">
-				<button md-icon-button>
-					<md-icon>menu</md-icon>
+			<mat-toolbar  style="z-index: 1" color="primary" class="mat-elevation-z4">
+				<button mat-icon-button>
+					<mat-icon>menu</mat-icon>
 				</button>
-			</md-toolbar>
+			</mat-toolbar>
 			<section fxFlex style="overflow: auto;">
 				<!-- <bd-container fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="20px">
-					<md-card fxFlex *ngFor="let type of ['have', 'owe']">
-				    	<md-card-title>What i {{type}}</md-card-title>
-				    	<md-card-subtitle>As of 2nd JUL, 2017</md-card-subtitle>
-				    	<md-card-content md-card-image fxLayout="row" fxLayoutAlign="start center">
-						    <md-nav-list>
-						    	<md-list-item *ngFor="let i of ['Investment', 'Cheques', 'Savings']">
-							    	<md-icon md-list-icon>folder</md-icon>
-						    		<h4 md-line>$37,2839</h4>
-						    		<p md-line>13% {{i}}</p>
-						    	</md-list-item>
-						    </md-nav-list>
+					<mat-card fxFlex *ngFor="let type of ['have', 'owe']">
+				    	<mat-card-title>What i {{type}}</mat-card-title>
+				    	<mat-card-subtitle>As of 2nd JUL, 2017</mat-card-subtitle>
+				    	<mat-card-content mat-card-image fxLayout="row" fxLayoutAlign="start center">
+						    <mat-nav-list>
+						    	<mat-list-item *ngFor="let i of ['Investment', 'Cheques', 'Savings']">
+							    	<mat-icon mat-list-icon>folder</mat-icon>
+						    		<h4 mat-line>$37,2839</h4>
+						    		<p mat-line>13% {{i}}</p>
+						    	</mat-list-item>
+						    </mat-nav-list>
 						    <img style="height: 150px;" src="http://www.conceptdraw.com/How-To-Guide/picture/Percentage-pie-chart-DA-determinations.png" alt="">
-					    </md-card-content>
-					</md-card>
+					    </mat-card-content>
+					</mat-card>
 				</bd-container> -->
 				<router-outlet></router-outlet>
 			</section>
 		</section>
-	</md-sidenav-container>
+	</mat-sidenav-container>
 </section>

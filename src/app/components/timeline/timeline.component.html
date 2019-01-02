@@ -20,14 +20,14 @@
 						<h4 fxFlex class="no-margin mat-title" style="padding-right: 15px; text-align: right"><strong>$23,219,233</strong></h4>
 					</section>
 					<section fxLayout="row" *ngIf="!transaction.isCategorized">
-						<button md-button (click)="changeCategory()">CHANGE</button>
-						<button md-button style="min-width: 50px">YES</button>
+						<button mat-button (click)="changeCategory()">CHANGE</button>
+						<button mat-button style="min-width: 50px">YES</button>
 					</section>
 				</section>
 				<span></span>
 			</section>
 			<section [fxShow]="!!transaction.comment" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px" style="padding-bottom: 10px">
-				<md-icon>subdirectory_arrow_right</md-icon>
+				<mat-icon>subdirectory_arrow_right</mat-icon>
 				<span class="mat-body-1">{{transaction.comment}}</span>			
 			</section>
 		</section>

@@ -1,10 +1,10 @@
 <section class="change-category-dialog">
-	<!-- <nav md-tab-nav-bar>
-		<a md-tab-link active="true">SELECT CATEGORY</a>
-		<a md-tab-link>SPLIT</a>
+	<!-- <nav mat-tab-nav-bar>
+		<a mat-tab-link active="true">SELECT CATEGORY</a>
+		<a mat-tab-link>SPLIT</a>
 	</nav> -->
-	<h2 md-dialog-title>Select Category</h2>
-	<md-dialog-content>
+	<h2 mat-dialog-title>Select Category</h2>
+	<mat-dialog-content>
 		<section class="categor-list-item" style="margin-bottom: 15px;" fxLayout="column" *ngFor="let j of [1,2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19,20]">
 			<section fxLayout="row" fxLayoutGap="15px">
 				<section class="category-icon" style="width: 40px; height: 40px; border-radius: 20px; background-color: #004D40" fxLayout="column" fxLayoutAlign="center center">
@@ -14,8 +14,8 @@
 					<span class="mat-body-2">Clothing</span>
 					<span class="mat-caption">( has 5 sub categories )</span>
 				</section>
-				<button md-icon-button>
-					<md-icon>{{j==1?'expand_less':'expand_more'}}</md-icon>
+				<button mat-icon-button>
+					<mat-icon>{{j==1?'expand_less':'expand_more'}}</mat-icon>
 				</button>
 			</section>
 			<section class="sub-category-list-item" *ngIf="j==1">
@@ -26,15 +26,15 @@
 						<span class="mat-body-1">Clothing</span>
 					</section>
 					<section fxLayout="column" fxLayoutAlign="center center">
-						<md-radio-button value="1"></md-radio-button>
+						<mat-radio-button value="1"></mat-radio-button>
 					</section>
 				</section>				
 			</section>
 		</section>		
-	</md-dialog-content>
-	<md-dialog-actions fxLayoutGap="10px">
+	</mat-dialog-content>
+	<mat-dialog-actions fxLayoutGap="10px">
 	<span fxFlex></span>
-		<button md-raised-button color="accent" disabled>UPDATE</button>
-		<button md-button md-dialog-close style="min-width: 40px">CLOSE</button>
-	</md-dialog-actions>
+		<button mat-raised-button color="accent" disabled>UPDATE</button>
+		<button mat-button mat-dialog-close style="min-width: 40px">CLOSE</button>
+	</mat-dialog-actions>
 </section>

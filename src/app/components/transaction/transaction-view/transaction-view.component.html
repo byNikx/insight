@@ -2,36 +2,36 @@
 	<bd-map></bd-map>
 </section>
 <bd-container style="margin-top: -4rem;">
-	<md-card>
-		<md-toolbar class="confirmation-required" *ngIf="transactionId==3">
-			<md-icon style="margin-left: 7px;">info</md-icon><h2 style="margin-left: 10px;">
+	<mat-card>
+		<mat-toolbar class="confirmation-required" *ngIf="transactionId==3">
+			<mat-icon style="margin-left: 7px;">info</mat-icon><h2 style="margin-left: 10px;">
 				Is this posting categorized correctly?				
 			</h2>
 			<div fxFlex></div>
-			<button md-button>CHANGE</button>
-			<button md-button style="min-width: 40px;">YES</button>
-		</md-toolbar>
+			<button mat-button>CHANGE</button>
+			<button mat-button style="min-width: 40px;">YES</button>
+		</mat-toolbar>
 		<section fxLayout="row" fxLayoutAlign="start start">
 			<section>
-				<md-card-title>City of London</md-card-title>
-				<md-card-subtitle>Taxi & Public Transportation</md-card-subtitle>				
+				<mat-card-title>City of London</mat-card-title>
+				<mat-card-subtitle>Taxi & Public Transportation</mat-card-subtitle>				
 			</section>
 			<div fxFlex></div>
 			
 			<section fxLayout="column" fxLayoutAlign="start end" >
-				<button md-icon-button>
-					<md-icon>star_border</md-icon>
+				<button mat-icon-button>
+					<mat-icon>star_border</mat-icon>
 				</button>				
 			</section>
 		</section>
-		<md-card-content>
-		<md-tab-group dynamicHeight="true">
-		  <md-tab label="Monthly Expenses">
+		<mat-card-content>
+		<mat-tab-group dynamicHeight="true">
+		  <mat-tab label="Monthly Expenses">
 		  	<section><br>
 		  		<bd-chart type="LineChart" [data]="line_ChartData" [options]="line_ChartOptions"></bd-chart>
 		  	</section>
-		  </md-tab>
-		  <md-tab label="Transactions">
+		  </mat-tab>
+		  <mat-tab label="Transactions">
 		  	<br>
 		  	<p>
 		  		Nulla nisi in ut elit et consectetur eu consectetur dolore sint deserunt qui deserunt anim incididunt magna in in voluptate laboris officia deserunt amet sunt nulla velit irure irure exercitation pariatur reprehenderit in esse sunt enim non exercitation ex aliquip amet deserunt commodo elit veniam quis nostrud dolore magna aliquip tempor tempor consequat nostrud dolore ex sit laborum pariatur excepteur dolor fugiat tempor minim sed proident amet et ut et reprehenderit amet sed sed cupidatat mollit proident ut velit ex eu ullamco id fugiat sed nulla duis in exercitation mollit in ut dolor aliquip exercitation ut commodo in nisi et qui aliquip amet irure dolore reprehenderit non voluptate ullamco eiusmod occaecat aliqua ut tempor laboris occaecat labore incididunt elit consequat dolore veniam adipisicing in ex culpa id amet exercitation ut ex nisi dolor id cupidatat dolore quis culpa in minim elit voluptate nostrud et nisi elit ullamco velit enim nisi minim cupidatat sunt do sed duis in nostrud incididunt laborum sunt in cillum culpa eiusmod sit aliquip labore nisi commodo et consequat id ut velit veniam ad id laborum qui sint non excepteur sit dolor reprehenderit sit dolor esse eu ullamco laboris sunt excepteur nisi ex pariatur dolore.
@@ -48,44 +48,44 @@
 		  	<p>
 		  		Nulla nisi in ut elit et consectetur eu consectetur dolore sint deserunt qui deserunt anim incididunt magna in in voluptate laboris officia deserunt amet sunt nulla velit irure irure exercitation pariatur reprehenderit in esse sunt enim non exercitation ex aliquip amet deserunt commodo elit veniam quis nostrud dolore magna aliquip tempor tempor consequat nostrud dolore ex sit laborum pariatur excepteur dolor fugiat tempor minim sed proident amet et ut et reprehenderit amet sed sed cupidatat mollit proident ut velit ex eu ullamco id fugiat sed nulla duis in exercitation mollit in ut dolor aliquip exercitation ut commodo in nisi et qui aliquip amet irure dolore reprehenderit non voluptate ullamco eiusmod occaecat aliqua ut tempor laboris occaecat labore incididunt elit consequat dolore veniam adipisicing in ex culpa id amet exercitation ut ex nisi dolor id cupidatat dolore quis culpa in minim elit voluptate nostrud et nisi elit ullamco velit enim nisi minim cupidatat sunt do sed duis in nostrud incididunt laborum sunt in cillum culpa eiusmod sit aliquip labore nisi commodo et consequat id ut velit veniam ad id laborum qui sint non excepteur sit dolor reprehenderit sit dolor esse eu ullamco laboris sunt excepteur nisi ex pariatur dolore.
 		  	</p>
-		  </md-tab>
-		</md-tab-group>
-		</md-card-content>
-	</md-card>
+		  </mat-tab>
+		</mat-tab-group>
+		</mat-card-content>
+	</mat-card>
 </bd-container>
 <bd-container>
-	<md-card>
-		<md-table #table [dataSource]="dataSource">
+	<mat-card>
+		<mat-table #table [dataSource]="dataSource">
 
 			<!--- Note that these columns can be defined in any order.
 			      The actual rendered columns are set as a property on the row definition" -->
 
 			<!-- ID Column -->
-			<ng-container mdColumnDef="userId">
-			  <md-header-cell *mdHeaderCellDef> ID </md-header-cell>
-			  <md-cell *mdCellDef="let row"> {{row.id}} </md-cell>
+			<ng-container matColumnDef="userId">
+			  <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+			  <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
 			</ng-container>
 
 			<!-- Progress Column -->
-			<ng-container mdColumnDef="progress">
-			  <md-header-cell *mdHeaderCellDef> MONTH </md-header-cell>
-			  <md-cell *mdCellDef="let row"> {{row.currentMonth}}% </md-cell>
+			<ng-container matColumnDef="progress">
+			  <mat-header-cell *matHeaderCellDef> MONTH </mat-header-cell>
+			  <mat-cell *matCellDef="let row"> {{row.currentMonth}}% </mat-cell>
 			</ng-container>
 
 			<!-- Name Column -->
-			<ng-container mdColumnDef="userName">
-			  <md-header-cell *mdHeaderCellDef> AVERAGE </md-header-cell>
-			  <md-cell *mdCellDef="let row"> {{row.average}} </md-cell>
+			<ng-container matColumnDef="userName">
+			  <mat-header-cell *matHeaderCellDef> AVERAGE </mat-header-cell>
+			  <mat-cell *matCellDef="let row"> {{row.average}} </mat-cell>
 			</ng-container>
 
 			<!-- Color Column -->
-			<ng-container mdColumnDef="color">
-			  <md-header-cell *mdHeaderCellDef>TOTAL</md-header-cell>
-			  <md-cell *mdCellDef="let row"> {{row.total}} </md-cell>
+			<ng-container matColumnDef="color">
+			  <mat-header-cell *matHeaderCellDef>TOTAL</mat-header-cell>
+			  <mat-cell *matCellDef="let row"> {{row.total}} </mat-cell>
 			</ng-container>
 
-			<md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>
-			<md-row *mdRowDef="let row; columns: displayedColumns;"></md-row>
-		</md-table>
-	</md-card>
+			<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+			<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+		</mat-table>
+	</mat-card>
 </bd-container>

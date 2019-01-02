@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MdDialog} from '@angular/material';
+import {MatDialog} from '@angular/material';
 
 
 @Component({
@@ -9,7 +9,7 @@ import {MdDialog} from '@angular/material';
 })
 export class TimelineComponent implements OnInit {
 
-  constructor(public dialog: MdDialog) {}
+  constructor(public dialog: MatDialog) {}
 
 	changeCategory(){
 		this.dialog.open(CategorySelectionDialog, {
